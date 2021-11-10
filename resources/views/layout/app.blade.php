@@ -25,8 +25,8 @@
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand">
-							<strong class="h3" style="color:#f15a24">k</strong><strong class="h2">et</strong>
-						</a>
+                <strong class="h3" style="color:#f15a24">k</strong><strong class="h2">et</strong>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
@@ -34,15 +34,38 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Registro">Registro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Estudiante">Consultar</a>
-                    </li>
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Registro">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Estudiante">Estudiantes</a>
+                        </li>
+                    @endif
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#">{{ Auth::user()->name }}
+                            </a>
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </div>
@@ -53,19 +76,22 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <div class="site-heading">
-											<strong class="h3" style="color:#f15a24">Kuepa</strong><strong class="h2">EduTech</strong>                        
+                        <strong class="h3" style="color:#f15a24">Kuepa</strong><strong
+                            class="h2">EduTech</strong>
                         <span class="subheading">Prueba Desarrollador FullStack PHP</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     <!-- Main Content-->
-    <div class="container px-4 px-lg-5">
+    <div class="container" style="height: 800px; overflow: auto" >
         <section id="container" class="wrapper">
             @yield('content')
         </section>
     </div>
+
     <!-- Footer-->
     <footer class="border-top">
         <div class="container px-4 px-lg-5">
@@ -102,10 +128,8 @@
             </div>
         </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+@yield('scripts')
 
 </html>

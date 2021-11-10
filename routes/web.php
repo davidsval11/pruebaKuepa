@@ -22,3 +22,7 @@ Route::get('/Registro', [EstudianteController::class, 'create']);
 Route::post('/Estudiante', [EstudianteController::class, 'store'])->name("estudiante.store");
 Route::put('/Estudiante', [EstudianteController::class, 'update'])->name("estudiante.update");
 Route::get('/Estudiante', [EstudianteController::class, 'index'])->name("estudiante.index");
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -14,7 +14,7 @@
             <a class="nav-link" href="/Registrarme">Registrarme</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Consultar</a>
+            <a class="nav-link" href="#">Estudiantes</a>
           </li>
         </ul>
 

@@ -39,7 +39,7 @@ class EstudianteController extends Controller
             $estudiantes = $estudiantes->where('programa_id', 'LIKE', '%' . $request->programa_id . '%');
         }
 
-        return view('estudiantes.lista', ['estudiantes' => $estudiantes->paginate(5), 'programas' => $programas]);
+        return view('estudiantes.consultar', ['estudiantes' => $estudiantes->paginate(5), 'programas' => $programas]);
     }
 
     /**
@@ -51,7 +51,7 @@ class EstudianteController extends Controller
     {
         $programas = Programa::all();
 
-        return view('estudiantes.registro', ['programas' => $programas]);
+        return view('estudiantes.rigistrar_alumno', ['programas' => $programas]);
     }
 
     /**
