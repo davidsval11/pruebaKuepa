@@ -9,4 +9,4 @@
 # 5. Ejecución de Seeders:
 'php artisan db:seed'
 # 6. Arranque del servidor:
-'php artisan serve'
+´php artisan serve´
