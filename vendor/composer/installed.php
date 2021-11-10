@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'bb8cf390e468fe40d7604e1cd0db577e6ecfa718',
+        'reference' => 'ebc864fa6126833501d032f324e4ad2c8f50eeda',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -400,7 +400,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'bb8cf390e468fe40d7604e1cd0db577e6ecfa718',
+            'reference' => 'ebc864fa6126833501d032f324e4ad2c8f50eeda',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -437,6 +437,15 @@
             'install_path' => __DIR__ . '/../laravel/tinker',
             'aliases' => array(),
             'reference' => 'c808a7227f97ecfd9219fbf913bad842ea854ddc',
+            'dev_requirement' => false,
+        ),
+        'laravel/ui' => array(
+            'pretty_version' => 'v3.3.2',
+            'version' => '3.3.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/ui',
+            'aliases' => array(),
+            'reference' => '28f3d190fe270b6dcd6fdab4a77a392e693ceca5',
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(
@@ -769,8 +778,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(
