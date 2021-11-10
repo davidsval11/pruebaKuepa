@@ -15,7 +15,7 @@ class CreateProgramassTable extends Migration
     {
         Schema::create('programass', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre', 15);
+            $table->string('nombre', 30);
             $table->timestamps();
         });
     }

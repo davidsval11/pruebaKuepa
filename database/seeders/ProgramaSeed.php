@@ -17,13 +17,19 @@ class ProgramaSeed extends Seeder
         DB::table('programass')->insert(
             [
                 [
-                    'nombre' => 'Bachillerato',
+                    'nombre' => 'Sistemas',
                 ],
                 [
-                    'nombre' => 'Inglés',
+                    'nombre' => 'Ambiente',
                 ],
                 [
-                    'nombre' => 'Preicfes',
+                    'nombre' => 'Ecosistema',
+                ],
+                [
+                    'nombre' => 'Tecnología',
+                ],
+                [
+                    'nombre' => 'Ingles',
                 ]
             ]
         );
